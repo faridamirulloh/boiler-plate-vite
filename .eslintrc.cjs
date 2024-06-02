@@ -27,16 +27,12 @@ module.exports = {
   ],
   rules: {
     // #region react rules.
-    'react/jsx-no-target-blank': 'off',
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
     'react/jsx-no-bind': ['error', {
       'allowArrowFunctions': true,
       'allowBind': false,
       'ignoreRefs': true
     }],
+    'react/jsx-no-target-blank': 'off',
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/no-did-update-set-state': 'error',
@@ -44,8 +40,16 @@ module.exports = {
     'react/no-unused-prop-types': 'error',
     'react/prop-types': 'error',
     'react/react-in-jsx-scope': 'error',
-    'react-hooks/rules-of-hooks': 'error',
+    'react/self-closing-comp': ['error', {
+      'component': true,
+      'html': true
+    }],
     'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
     // #endregion
 
     // #region eslint rules.
